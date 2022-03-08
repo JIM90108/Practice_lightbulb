@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Practice_lightbulb" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightBulb_off.png" translatesAutoresizingMaskIntoConstraints="NO" id="s0P-9x-anV">
+                                <rect key="frame" x="44" y="44" width="326" height="438"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="326" id="d8H-WU-SYw"/>
+                                    <constraint firstAttribute="height" constant="438" id="tfe-2I-l33"/>
+                                </constraints>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="lightBulb_on.png" translatesAutoresizingMaskIntoConstraints="NO" id="EDk-2A-qvM">
+                                <rect key="frame" x="44" y="44" width="326" height="438"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="438" id="IKx-hZ-mHj"/>
+                                    <constraint firstAttribute="width" constant="326" id="Nta-6U-1cK"/>
+                                </constraints>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Eo7-4p-rzz">
+                                <rect key="frame" x="42" y="555" width="330" height="31"/>
+                                <connections>
+                                    <action selector="alphaHandler:" destination="BYZ-38-t0r" eventType="valueChanged" id="ab9-yS-TaF"/>
+                                </connections>
+                            </slider>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kGw-Nj-d3f">
+                                <rect key="frame" x="183" y="719" width="49" height="31"/>
+                                <connections>
+                                    <action selector="powerSwitch:" destination="BYZ-38-t0r" eventType="valueChanged" id="uuA-cF-eDV"/>
+                                </connections>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="labelColor"/>
+                        <constraints>
+                            <constraint firstItem="s0P-9x-anV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="0XK-LT-9bq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eo7-4p-rzz" secondAttribute="trailing" constant="44" id="56J-6Y-bSw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s0P-9x-anV" secondAttribute="trailing" constant="44" id="9qX-42-1we"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="kGw-Nj-d3f" secondAttribute="trailing" constant="184" id="E2K-NF-fJ9"/>
+                            <constraint firstItem="s0P-9x-anV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="ElP-gR-wxf"/>
+                            <constraint firstItem="kGw-Nj-d3f" firstAttribute="top" secondItem="Eo7-4p-rzz" secondAttribute="bottom" constant="134" id="HuB-bQ-KP5"/>
+                            <constraint firstItem="Eo7-4p-rzz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="MZG-QO-Yol"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EDk-2A-qvM" secondAttribute="trailing" constant="44" id="Z5l-Ui-wZX"/>
+                            <constraint firstItem="kGw-Nj-d3f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="183" id="Zvj-BM-OCa"/>
+                            <constraint firstItem="Eo7-4p-rzz" firstAttribute="top" secondItem="s0P-9x-anV" secondAttribute="bottom" constant="73" id="evW-kO-8GO"/>
+                            <constraint firstItem="EDk-2A-qvM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="hre-qT-BIS"/>
+                            <constraint firstItem="EDk-2A-qvM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="44" id="vmU-N5-D1F"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="lightBuldOn" destination="EDk-2A-qvM" id="Yzg-2h-GZF"/>
+                        <outlet property="lightSlider" destination="Eo7-4p-rzz" id="6wO-c6-7eK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="51.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="lightBulb_off.png" width="456" height="608"/>
+        <image name="lightBulb_on.png" width="456" height="608"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
